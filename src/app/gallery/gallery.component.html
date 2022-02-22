@@ -1,0 +1,63 @@
+<div class="header-space">
+  <!-- ======= Portfolio Section ======= -->
+  <section id="portfolio" class="portfolio">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>Gallery</h2>
+        <p></p>
+      </div>
+
+      <ul
+        id="portfolio-flters"
+        class="d-flex justify-content-center"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        <li data-filter="*" class="filter-active">All</li>
+        <li data-filter=".filter-app">Exterior</li>
+        <li data-filter=".filter-card">Interior</li>
+        <li data-filter=".filter-web">Lake View</li>
+      </ul>
+
+      <div
+        class="row portfolio-container"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <div
+          *ngFor="let image of images"
+          [ngClass]="'col-lg-4 col-md-6 portfolio-item filter-' + image['type']"
+        >
+          <div class="portfolio-img">
+            <img
+              [src]="image['path']"
+              class="img-fluid"
+              alt=""
+            />
+          </div>
+          <div class="portfolio-info">
+            <h4>{{image['location']}}</h4>
+            <p></p>
+            <a
+              href="assets/img/portfolio/portfolio-1.jpg"
+              data-gallery="portfolioGallery"
+              class="portfolio-lightbox preview-link"
+              title="App 1"
+              ><i class="bx bx-plus"></i
+            ></a>
+            <a
+              href="portfolio-details.html"
+              class="details-link"
+              title="More Details"
+              ><i class="bx bx-link"></i
+            ></a>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+  </section>
+  <!-- End Portfolio Section -->
+</div>
+
+<hr>

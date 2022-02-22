@@ -1,0 +1,185 @@
+<div class="header-space">
+  <!-- ======= Contact Section ======= -->
+  <section id="contact" class="contact">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>Reservation</h2>
+        <p></p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 mt-5 mt-lg-0 d-flex align-items-stretch">
+          <form
+            action="forms/contact.php"
+            method="post"
+            role="form"
+            class="php-email-form"
+          >
+            <div class="row">
+              <h3>Personal Details</h3>
+              <hr />
+              <div class="form-group col-md-6">
+                <label for="name">First Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  class="form-control"
+                  id="first-name"
+                  placeholder="First Name"
+                  required
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="name">Last Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  class="form-control"
+                  placeholder="Last Name"
+                  id="name"
+                  required
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="name">Contact Number</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  name="email"
+                  id="email"
+                  placeholder="Contact Number"
+                  required
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="name">Your Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  name="email"
+                  id="email"
+                  placeholder="Email ID"
+                  required
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="name">City</label>
+                <input
+                  type="text"
+                  name="name"
+                  class="form-control"
+                  id="first-name"
+                  placeholder="City"
+                  required
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="name">State</label>
+                <input
+                  type="text"
+                  name="name"
+                  class="form-control"
+                  placeholder="State"
+                  id="name"
+                  required
+                />
+              </div>
+              <div class="form-group col-md-12">
+                <label for="name">Address</label>
+                <textarea
+                  type="text"
+                  name="name"
+                  class="form-control"
+                  placeholder="Address"
+                  id="name"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+
+              <h3><br />Booking Details</h3>
+              <hr />
+              <div class="form-group col-md-6">
+                <label for="name">Room Type</label>
+                <select id="room-type" class="form-control">
+                  <option value="">Select Room Type</option>
+                  <option value="standard">Standard</option>
+                  <option value="deluxe">Deluxe</option>
+                  <option value="superdeluxe">Super Deluxe</option>
+                </select>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="name">Number Of Room</label>
+                <select id="room-type" class="form-control">
+                  <option value="">Select Number Of Room</option>
+                  <option *ngFor="let item of room_count" [value]="item">
+                    {{ item }}
+                  </option>
+                </select>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="name">Adults</label>
+                <select id="room-type" class="form-control">
+                  <option value="">Select Number Of Adults</option>
+                  <option *ngFor="let item of room_count" [value]="item">
+                    {{ item }}
+                  </option>
+                </select>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="name">Children</label>
+                <select id="room-type" class="form-control">
+                  <option value="">Select Number Of Children</option>
+                  <option *ngFor="let item of room_count" [value]="item">
+                    {{ item }}
+                  </option>
+                </select>
+              </div>
+
+              <div class="form-group col-md-6">
+                <label for="name">Check In Date</label>
+                <input
+                  type="date"
+                  name="name"
+                  class="form-control"
+                  placeholder="State"
+                  id="name"
+                  required
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="name">Check Out Date</label>
+                <input
+                  type="date"
+                  name="name"
+                  class="form-control"
+                  placeholder="State"
+                  id="name"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="my-3">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">
+                Your message has been sent. Thank you!
+              </div>
+            </div>
+            <div class="text-center">
+              <button type="submit">Book</button>
+            </div>
+            <br />
+            <p style="font-style: italic; text-align: center; color: red">
+              Note: After inquiry, We will get back to you as soon as possible.
+              Room reservations will be confirmed only after full payment.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Contact Section -->
+</div>
+<hr />
